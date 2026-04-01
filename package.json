@@ -3,17 +3,28 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --hostname 0.0.0.0 --port 3000",
     "build": "next build",
-    "start": "next start"
+    "start": "next start --hostname 0.0.0.0 --port 3000",
+    "db:seed": "npx tsx lib/db/seed.ts"
   },
   "dependencies": {
+    "@aws-sdk/client-s3": "^3.1013.0",
+    "@aws-sdk/s3-request-presigner": "^3.1013.0",
+    "@tailwindcss/typography": "^0.5.19",
+    "better-sqlite3": "^12.6.2",
     "next": "16.1.6",
+    "pdfjs-dist": "^5.5.207",
+    "plaid": "^41.4.0",
     "react": "19.2.3",
-    "react-dom": "19.2.3"
+    "react-dom": "19.2.3",
+    "react-grid-layout": "^2.2.2",
+    "react-markdown": "^10.1.0",
+    "recharts": "^3.8.0"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
+    "@types/better-sqlite3": "^7.6.13",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
